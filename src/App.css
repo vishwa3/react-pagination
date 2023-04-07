@@ -1,38 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  width: 100vw;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 0.5rem;
+  place-items: center;
+}
+
+.product {
+  padding: 1rem;
+  width: 22rem;
+  height: 22rem;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+  background-color: rgb(220, 220, 220);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product img {
+  width: 100%;
+  height: 91%;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination span {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid gray;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination_selected {
+  background-color: rgb(220, 220, 220);
 }
